@@ -136,6 +136,8 @@ Partial Class UF_HIPOTESIS
         Me.Controls.Add(Me.txt_Hipotesis)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "UF_HIPOTESIS"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "HIPOTESIS SIMPLES"

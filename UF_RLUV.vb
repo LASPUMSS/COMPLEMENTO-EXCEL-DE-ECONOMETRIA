@@ -46,7 +46,6 @@
 
         Dim RangoX As Excel.Range
 
-
         If ComBox_Hojas.Text = "" Then
             MsgBox("Debes definir la hoja donde estan los datos", MsgBoxStyle.Exclamation, "ALERTA")
         Else

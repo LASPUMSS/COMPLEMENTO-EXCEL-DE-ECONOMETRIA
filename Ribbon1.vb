@@ -37,13 +37,11 @@ Public Class Ribbon1
     Public Sub btn_RLUV(Control As Office.IRibbonControl)
         Dim frm_RLUV As New UF_RLUV
         frm_RLUV.Show()
-
     End Sub
 
     Public Sub btn_GHPH(Control As Office.IRibbonControl)
         On Error Resume Next
         hojaHipotesis()
-
     End Sub
 
     Public Sub btn_ScaPlot(Control As Office.IRibbonControl)
@@ -59,9 +57,12 @@ Public Class Ribbon1
         Dim frm_INTERVALO_DE_CONFIANZA As New UF_INTERVALO_DE_CONFIANZA
         frm_INTERVALO_DE_CONFIANZA.ShowDialog()
     End Sub
-
     Public Sub btn_CudAnov(Control As Office.IRibbonControl)
         cuadroANOVAmet()
+    End Sub
+    Public Sub btn_RLVV(Control As Office.IRibbonControl)
+        Dim frm_RLVV As New UF_RLVV
+        frm_RLVV.Show()
     End Sub
 
 #End Region

@@ -83,6 +83,8 @@ Partial Class UF_INTERVALO_DE_CONFIANZA
         Me.Controls.Add(Me.btn_Aceptar)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "UF_INTERVALO_DE_CONFIANZA"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "INTERVALO DE CONFIANZA"
