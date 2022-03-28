@@ -2,14 +2,16 @@
 
     Public Sub graficoDispersionMetodo(ByVal sigY As String, ByVal sigX As String, ByVal rangoY As String, ByVal rangoX As String, ByVal nombreHoja As String)
 
-        Dim tituloGrafico As String = "Grafíco de Dispersión, Explicar: " + sigY + " Mediante: " + sigX
+        Dim tituloGrafico As String
+
+        tituloGrafico = "Grafíco de Dispersión, Explicar: " & sigY & " Mediante: " & sigX
 
         Globals.ThisAddIn.Application.ActiveSheet.Shapes.AddChart2(240, Microsoft.Office.Interop.Excel.XlChartType.xlXYScatter).Select()
-
         Globals.ThisAddIn.Application.ActiveChart.SeriesCollection.NewSeries
-        Globals.ThisAddIn.Application.ActiveChart.FullSeriesCollection(1).Name = "=""" + tituloGrafico + """"
-        Globals.ThisAddIn.Application.ActiveChart.FullSeriesCollection(1).XValues = "=" + nombreHoja + "!" + rangoX
-        Globals.ThisAddIn.Application.ActiveChart.FullSeriesCollection(1).Values = "=" + nombreHoja + "!" + rangoY
+        Globals.ThisAddIn.Application.ActiveChart.FullSeriesCollection(1).Name = "=""" & tituloGrafico & """"
+        Globals.ThisAddIn.Application.ActiveChart.FullSeriesCollection(1).XValues = "=" & nombreHoja & "!" & rangoX
+        Globals.ThisAddIn.Application.ActiveChart.FullSeriesCollection(1).Values = "=" & nombreHoja & "!" & rangoY
+
 
         Globals.ThisAddIn.Application.ActiveChart.FullSeriesCollection(1).Trendlines.Add
         Globals.ThisAddIn.Application.ActiveChart.FullSeriesCollection(1).Trendlines(1).Select
