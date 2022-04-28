@@ -34,7 +34,7 @@
     <PublishUrl>publish\</PublishUrl>
     <InstallUrl />
     <TargetCulture>es</TargetCulture>
-    <ApplicationVersion>1.0.0.2</ApplicationVersion>
+    <ApplicationVersion>1.0.0.3</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
@@ -204,22 +204,22 @@
   -->
   <ItemGroup>
     <AppDesigner Include="My Project\" />
-    <Compile Include="CrearHojaHipotesis.vb" />
-    <Compile Include="CuadroANOVA.vb" />
-    <Compile Include="FormatoRLVV.vb" />
-    <Compile Include="IntervaloDeConfianza.vb" />
-    <Compile Include="RLVV.vb" />
+    <Compile Include="CC01_CrearHojaHipotesis.vb" />
+    <Compile Include="CC05_CuadroANOVA.vb" />
+    <Compile Include="BB02_FormatoRLVV.vb" />
+    <Compile Include="CC04_IntervaloDeConfianza.vb" />
+    <Compile Include="BB04_RLVV.vb" />
     <Compile Include="UF_INTERVALO_DE_CONFIANZA.Designer.vb">
       <DependentUpon>UF_INTERVALO_DE_CONFIANZA.vb</DependentUpon>
     </Compile>
     <Compile Include="UF_INTERVALO_DE_CONFIANZA.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormatoHojaHipotesis.vb" />
-    <Compile Include="FormatoRLUV.vb" />
-    <Compile Include="GraficoDispersion.vb" />
-    <Compile Include="HipotesisProcedimientos.vb" />
-    <Compile Include="RLUV.vb" />
+    <Compile Include="CC02_FormatoHojaHipotesis.vb" />
+    <Compile Include="BB01_FormatoRLUV.vb" />
+    <Compile Include="AA01_GraficoDispersion.vb" />
+    <Compile Include="CC03_HipotesisProcedimientos.vb" />
+    <Compile Include="BB03_RLUV.vb" />
     <Compile Include="Ribbon1.vb" />
     <Compile Include="ThisAddIn.vb">
       <SubType>Code</SubType>

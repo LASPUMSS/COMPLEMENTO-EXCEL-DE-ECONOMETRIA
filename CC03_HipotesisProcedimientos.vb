@@ -1,4 +1,4 @@
-﻿Module HipotesisProcedimientos
+﻿Module CC03_HipotesisProcedimientos
     Public Sub llamadaHipotesis(ByVal txt_Hipotesis As String, ByVal txt_Hp As String, ByVal txt_NvSf As String, ByVal ComB_Betas As String)
 
         Dim filaInicial As String

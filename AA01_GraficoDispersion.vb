@@ -1,4 +1,4 @@
-﻿Module GraficoDispersion
+﻿Module AA01_GraficoDispersion
 
     Public Sub graficoDispersionMetodo(ByVal sigY As String, ByVal sigX As String, ByVal rangoY As String, ByVal rangoX As String, ByVal nombreHoja As String)
 

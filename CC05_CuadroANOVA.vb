@@ -1,4 +1,4 @@
-﻿Module CuadroANOVA
+﻿Module CC05_CuadroANOVA
     Public Sub cuadroANOVAmet()
         On Error Resume Next
 

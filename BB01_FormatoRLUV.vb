@@ -1,4 +1,4 @@
-﻿Module FormatoRLUV
+﻿Module BB01_FormatoRLUV
     Public Sub formatoTitulos()
         Dim nCol As Integer = Globals.ThisAddIn.Application.ActiveSheet.Cells(1, 1).End(Microsoft.Office.Interop.Excel.XlDirection.xlToRight).Column
         Dim hojaActiva As Excel.Worksheet = Globals.ThisAddIn.Application.ActiveSheet

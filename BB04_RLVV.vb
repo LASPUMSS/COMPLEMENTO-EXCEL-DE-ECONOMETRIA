@@ -1,4 +1,4 @@
-﻿Module RLVV
+﻿Module BB04_RLVV
     Public Sub metodoPrincipalRLVV(ByVal txt_RgX As String, ByVal txt_RgY As String)
         copiarDatosRLVV(txt_RgX, txt_RgY)
 

@@ -1,4 +1,4 @@
-﻿Module IntervaloDeConfianza
+﻿Module CC04_IntervaloDeConfianza
     Public Sub intervaloDeConfianzaMet(ByVal txt_NvSf As String, ByVal ComB_Betas As String)
         On Error Resume Next
 
