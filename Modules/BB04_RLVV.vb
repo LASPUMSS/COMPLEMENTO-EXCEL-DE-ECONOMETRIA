@@ -19,7 +19,6 @@
         Dim colMY As Integer
 
         Dim i As Integer
-        Dim n As Long
 
         hojaDatos = Globals.ThisAddIn.Application.ActiveSheet
         Globals.ThisAddIn.Application.Sheets.Add()
@@ -360,7 +359,7 @@
     End Sub
 
     Public Sub M_FALTANTES()
-        'On Error Resume Next
+
         With Globals.ThisAddIn.Application
 
             Dim fila As Long
@@ -369,7 +368,6 @@
             Dim i As Long
             Dim i2 As Long
             Dim i3 As Long
-            Dim i4 As Long
 
             .Cells(4, .Columns.Count).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).Select()
             n = .ActiveCell.Column
@@ -382,8 +380,8 @@
             i2 = 0
             i3 = 0
 
-
             .Cells(.Rows.Count, n).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Offset(4, 0).Select()
+
             For i3 = 0 To .Cells(2, 2).Value - 1 Step 1
 
                 For i = 0 To .Cells(2, 2).Value - 1 Step 1
@@ -394,7 +392,9 @@
                 i2 = 0
                 fila = fila + 1
             Next i3
+
             '#######################################################################
+
             Dim aux As Excel.Range
             Dim aux2 As Excel.Range
             .Cells(.Rows.Count, n).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Select()
@@ -409,6 +409,7 @@
             i3 = 0
 
             Dim rgVarianza As String
+
             For i = 0 To .Cells(2, 2).Value - 1 Step 1
                 aux.Select()
                 .ActiveCell.Offset(i2, i3).Select()
@@ -420,7 +421,9 @@
                 i2 = i2 + 1
                 i3 = i3 + 1
             Next i
+
             '#######################################################################
+
             Dim n2 As Long
             n2 = .Cells(2, 2).Value
             n2 = n2 + 3
@@ -430,7 +433,9 @@
                 .ActiveCell.Offset(n2, 0).FormulaR1C1 = "=SQRT(R[-" & n2 & "]C)"
                 .ActiveCell.Offset(1, 0).Select()
             Loop
+
             '#######################################################################
+
             .Cells(4, .Columns.Count).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).Select()
             .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Select()
             fila = .ActiveCell.Row

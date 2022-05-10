@@ -204,63 +204,63 @@
   -->
   <ItemGroup>
     <AppDesigner Include="My Project\" />
-    <Compile Include="CC01_CrearHojaHipotesis.vb" />
-    <Compile Include="CC05_CuadroANOVA.vb" />
-    <Compile Include="BB02_FormatoRLVV.vb" />
-    <Compile Include="CC04_IntervaloDeConfianza.vb" />
-    <Compile Include="BB04_RLVV.vb" />
-    <Compile Include="UF_INTERVALO_DE_CONFIANZA.Designer.vb">
+    <Compile Include="Modules\CC01_CrearHojaHipotesis.vb" />
+    <Compile Include="Modules\CC05_CuadroANOVA.vb" />
+    <Compile Include="Modules\BB02_FormatoRLVV.vb" />
+    <Compile Include="Modules\CC04_IntervaloDeConfianza.vb" />
+    <Compile Include="Modules\BB04_RLVV.vb" />
+    <Compile Include="Forms\UF_INTERVALO_DE_CONFIANZA.Designer.vb">
       <DependentUpon>UF_INTERVALO_DE_CONFIANZA.vb</DependentUpon>
     </Compile>
-    <Compile Include="UF_INTERVALO_DE_CONFIANZA.vb">
+    <Compile Include="Forms\UF_INTERVALO_DE_CONFIANZA.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CC02_FormatoHojaHipotesis.vb" />
-    <Compile Include="BB01_FormatoRLUV.vb" />
-    <Compile Include="AA01_GraficoDispersion.vb" />
-    <Compile Include="CC03_HipotesisProcedimientos.vb" />
-    <Compile Include="BB03_RLUV.vb" />
+    <Compile Include="Modules\CC02_FormatoHojaHipotesis.vb" />
+    <Compile Include="Modules\BB01_FormatoRLUV.vb" />
+    <Compile Include="Modules\AA01_GraficoDispersion.vb" />
+    <Compile Include="Modules\CC03_HipotesisProcedimientos.vb" />
+    <Compile Include="Modules\BB03_RLUV.vb" />
     <Compile Include="Ribbon1.vb" />
     <Compile Include="ThisAddIn.vb">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="UF_GGD.Designer.vb">
+    <Compile Include="Forms\UF_GGD.Designer.vb">
       <DependentUpon>UF_GGD.vb</DependentUpon>
     </Compile>
-    <Compile Include="UF_GGD.vb">
+    <Compile Include="Forms\UF_GGD.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UF_HIPOTESIS.Designer.vb">
+    <Compile Include="Forms\UF_HIPOTESIS.Designer.vb">
       <DependentUpon>UF_HIPOTESIS.vb</DependentUpon>
     </Compile>
-    <Compile Include="UF_HIPOTESIS.vb">
+    <Compile Include="Forms\UF_HIPOTESIS.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UF_RLUV.Designer.vb">
+    <Compile Include="Forms\UF_RLUV.Designer.vb">
       <DependentUpon>UF_RLUV.vb</DependentUpon>
     </Compile>
-    <Compile Include="UF_RLUV.vb">
+    <Compile Include="Forms\UF_RLUV.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UF_RLVV.Designer.vb">
+    <Compile Include="Forms\UF_RLVV.Designer.vb">
       <DependentUpon>UF_RLVV.vb</DependentUpon>
     </Compile>
-    <Compile Include="UF_RLVV.vb">
+    <Compile Include="Forms\UF_RLVV.vb">
       <SubType>Form</SubType>
     </Compile>
-    <EmbeddedResource Include="UF_GGD.resx">
+    <EmbeddedResource Include="Forms\UF_GGD.resx">
       <DependentUpon>UF_GGD.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UF_HIPOTESIS.resx">
+    <EmbeddedResource Include="Forms\UF_HIPOTESIS.resx">
       <DependentUpon>UF_HIPOTESIS.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UF_INTERVALO_DE_CONFIANZA.resx">
+    <EmbeddedResource Include="Forms\UF_INTERVALO_DE_CONFIANZA.resx">
       <DependentUpon>UF_INTERVALO_DE_CONFIANZA.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UF_RLUV.resx">
+    <EmbeddedResource Include="Forms\UF_RLUV.resx">
       <DependentUpon>UF_RLUV.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UF_RLVV.resx">
+    <EmbeddedResource Include="Forms\UF_RLVV.resx">
       <DependentUpon>UF_RLVV.vb</DependentUpon>
     </EmbeddedResource>
     <None Include="Complemento De Econometria Basica_TemporaryKey.pfx" />
@@ -301,6 +301,7 @@
   <ItemGroup>
     <None Include="Resources\RLUV_32x32.png" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
