@@ -220,7 +220,7 @@
     <Compile Include="Modules\AA01_GraficoDispersion.vb" />
     <Compile Include="Modules\CC03_HipotesisProcedimientos.vb" />
     <Compile Include="Modules\BB03_RLUV.vb" />
-    <Compile Include="Ribbon1.vb" />
+    <Compile Include="Ribbons\Ribbon1.vb" />
     <Compile Include="ThisAddIn.vb">
       <SubType>Code</SubType>
     </Compile>
@@ -293,7 +293,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Ribbon1.xml" />
+    <EmbeddedResource Include="Ribbons\Ribbon1.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\RLUN_64x64.png" />
