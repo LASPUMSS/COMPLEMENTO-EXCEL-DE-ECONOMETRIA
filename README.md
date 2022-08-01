@@ -4,5 +4,7 @@ El presente complemento de Excel permite hacer gráficos de dispersión, regresi
 
 
 ## Graficos De Disperción
+Introduce los datos correspondientes:
 ![](Resources/img_form_grafico2.jpg)
+Y se generar el gráficos de dispersión:
 ![](Resources/grafico_dispersion.jpg)
