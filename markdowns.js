@@ -1,7 +1,7 @@
 const d = document;
 const $main = d.querySelector("main");
 
-fetch("markdowns/00_intro.md")
+fetch("README.md")
   .then((res) => (res.ok ? res.text() : Promise.reject(res)))
   .then((text) => {
     $main.innerHTML = new showdown.Converter().makeHtml(text);
