@@ -5,4 +5,4 @@ El presente complemento de Excel permite hacer gráficos de dispersión, regresi
 
 ## Graficos De Disperción
 ![](Resources/img_form_grafico2.jpg)
-![](Resources/grafico_dispersion)
+![](Resources/grafico_dispersion.jpg)
