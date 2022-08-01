@@ -5,6 +5,20 @@ El presente complemento de Excel permite hacer gráficos de dispersión, regresi
 
 ## Graficos De Disperción
 Introduce los datos correspondientes:
+
 ![](Resources/img_form_grafico2.jpg)
-Y se generar el gráficos de dispersión:
+
+Y se generara el gráficos de dispersión:
+
 ![](Resources/grafico_dispersion.jpg)
+
+
+## Regresión Por MCO A Una Variable Independiente
+
+Introduce los datos correspondientes:
+
+![](Resources/img_form_RLUV.jpg)
+
+Y se generara la regresión por MCO :
+
+![](Resources/RLUV.jpg)
