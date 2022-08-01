@@ -22,3 +22,13 @@ Introduce los datos correspondientes:
 Y se generara la regresión por MCO :
 
 ![](Resources/RLUV.jpg)
+
+## Regresión Por MCO A Varias Variables Independientes
+
+Introduce los datos correspondientes:
+
+![](Resources/img_form_RLVV.jpg)
+
+Y se generara la regresión por MCO :
+
+![](Resources/RLVV.jpg)
