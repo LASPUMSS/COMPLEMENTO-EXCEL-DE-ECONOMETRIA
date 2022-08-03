@@ -1,4 +1,5 @@
-﻿Module BB03_RLUV
+﻿Imports Microsoft.Office.Interop
+Module BB03_RLUV
 
     Public Sub preparaHoja(ByVal HojaDatos As String, ByVal RangoY As String, ByVal RangoX As String, ByVal explicarY As String, ByVal medianteX As String)
 
@@ -147,8 +148,8 @@
         Dim hojaActiva As Excel.Worksheet = Globals.ThisAddIn.Application.ActiveSheet
         Dim celdaActiva As Excel.Range = hojaActiva.Cells(1, 1)
 
-        n = celdaActiva.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Row
-        c = celdaActiva.End(Microsoft.Office.Interop.Excel.XlDirection.xlToRight).Column
+        n = celdaActiva.End(Excel.XlDirection.xlDown).Row
+        c = celdaActiva.End(Excel.XlDirection.xlToRight).Column
 
         i = 2
 
@@ -229,9 +230,9 @@
 
         Dim hojaActiva As Excel.Worksheet = Globals.ThisAddIn.Application.ActiveSheet
         Dim celdaInicial As Excel.Range = hojaActiva.Cells(1, 1)
-        Dim num_filas_sum As Long = celdaInicial.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Row + 1
-        Dim num_columnas_sum As Integer = celdaInicial.End(Microsoft.Office.Interop.Excel.XlDirection.xlToRight).Column - 2
-        Dim n1 As Long = celdaInicial.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Row
+        Dim num_filas_sum As Long = celdaInicial.End(Excel.XlDirection.xlDown).Row + 1
+        Dim num_columnas_sum As Integer = celdaInicial.End(Excel.XlDirection.xlToRight).Column - 2
+        Dim n1 As Long = celdaInicial.End(Excel.XlDirection.xlDown).Row
         Dim c1 As Integer
 
 
@@ -244,15 +245,15 @@
 
             .Cells(n1 + 2, 15).Value = "SRC"
             .Cells(n1 + 2, 15).Font.Bold = True
-            .Cells(n1 + 2, 15).HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+            .Cells(n1 + 2, 15).HorizontalAlignment = Excel.Constants.xlCenter
 
             .Cells(n1 + 2, 16).Value = "STC"
             .Cells(n1 + 2, 16).Font.Bold = True
-            .Cells(n1 + 2, 16).HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+            .Cells(n1 + 2, 16).HorizontalAlignment = Excel.Constants.xlCenter
 
             .Cells(n1 + 2, 17).Value = "SEC"
             .Cells(n1 + 2, 17).Font.Bold = True
-            .Cells(n1 + 2, 17).HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+            .Cells(n1 + 2, 17).HorizontalAlignment = Excel.Constants.xlCenter
 
         End With
 
@@ -277,7 +278,7 @@
     Public Sub calculoBetas(ByRef explicarY As String, ByVal medianteX As String)
 
         Dim hojaActiva As Excel.Worksheet = Globals.ThisAddIn.Application.ActiveSheet
-        Dim n As Long = hojaActiva.Cells(1, 1).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Row
+        Dim n As Long = hojaActiva.Cells(1, 1).End(Excel.XlDirection.xlDown).Row
 
 
         With Globals.ThisAddIn.Application
@@ -468,7 +469,7 @@
 
     Public Sub propiedadesMCO()
 
-        Dim FI As Integer = Globals.ThisAddIn.Application.Cells(Globals.ThisAddIn.Application.Rows.Count, 1).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Row + 2
+        Dim FI As Integer = Globals.ThisAddIn.Application.Cells(Globals.ThisAddIn.Application.Rows.Count, 1).End(Excel.XlDirection.xlUp).Row + 2
 
         With Globals.ThisAddIn.Application
 
@@ -562,4 +563,5 @@
 
 
     End Sub
+
 End Module

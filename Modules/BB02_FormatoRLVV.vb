@@ -1,4 +1,5 @@
-﻿Module BB02_FormatoRLVV
+﻿Imports Microsoft.Office.Interop
+Module BB02_FormatoRLVV
     Public Sub AJUSTE_01()
         With Globals.ThisAddIn.Application
             Dim n As Long
@@ -7,7 +8,7 @@
 
             n = (.Cells(1, 2).Value) / 2
             n2 = (.Cells(2, 6).Value) / 2
-            n3 = .Cells(4, .Columns.Count).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).Column
+            n3 = .Cells(4, .Columns.Count).End(Excel.XlDirection.xlToLeft).End(Excel.XlDirection.xlToLeft).Column
 
             With .Cells(1, 1)
                 .Value = "N° FILAS Y"
@@ -49,96 +50,96 @@
 
             .Cells(4, 2).Select
             .ActiveCell.CurrentRegion.Select()
-            .Selection.HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+            .Selection.HorizontalAlignment = Excel.Constants.xlCenter
             .Selection.Interior.ColorIndex = 44
             .Selection.Font.Bold = True
 
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeLeft)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeLeft)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeTop).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeRight)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeRight)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideVertical).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideVertical).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Excel.Constants.xlNone
 
             With .Cells(n, 1)
                 .Value = " Y ="
-                .HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                .HorizontalAlignment = Excel.Constants.xlCenter
                 .Font.Bold = True
                 .Font.Size = 14
             End With
 
             .Cells(4, 5).Select
             .ActiveCell.CurrentRegion.Select()
-            .Selection.HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+            .Selection.HorizontalAlignment = Excel.Constants.xlCenter
             .Selection.Interior.ColorIndex = 43
             .Selection.Font.Bold = True
 
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeLeft)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeLeft)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeTop).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeRight)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeRight)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideVertical).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideVertical).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Excel.Constants.xlNone
 
             With .Cells(n, 4)
                 .Value = " X ="
-                .HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                .HorizontalAlignment = Excel.Constants.xlCenter
                 .Font.Bold = True
                 .Font.Size = 14
             End With
 
             .Cells(4, n3).Select
             .ActiveCell.CurrentRegion.Select()
-            .Selection.HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+            .Selection.HorizontalAlignment = Excel.Constants.xlCenter
             .Selection.Interior.ColorIndex = 2
             .Selection.Font.Bold = True
 
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeLeft)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeLeft)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeTop).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeRight)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeRight)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideVertical).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideVertical).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Excel.Constants.xlNone
 
             With .Cells(n2 + 4, n3 - 1)
                 .Value = "XT ="
-                .HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                .HorizontalAlignment = Excel.Constants.xlCenter
                 .Font.Bold = True
                 .Font.Size = 14
             End With
@@ -151,42 +152,42 @@
                 .Subscript = False
                 .OutlineFont = False
                 .Shadow = False
-                .Underline = Microsoft.Office.Interop.Excel.XlUnderlineStyle.xlUnderlineStyleNone
-                .ThemeColor = Microsoft.Office.Interop.Excel.XlThemeColor.xlThemeColorLight1
+                .Underline = Excel.XlUnderlineStyle.xlUnderlineStyleNone
+                .ThemeColor = Excel.XlThemeColor.xlThemeColorLight1
                 .TintAndShade = 0
-                .ThemeFont = Microsoft.Office.Interop.Excel.XlThemeFont.xlThemeFontMinor
+                .ThemeFont = Excel.XlThemeFont.xlThemeFontMinor
             End With
 
             .Cells(4, n3).Select
-            .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Select()
+            .ActiveCell.End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).Select()
 
             .ActiveCell.CurrentRegion.Select()
-            .Selection.HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+            .Selection.HorizontalAlignment = Excel.Constants.xlCenter
             .Selection.Interior.ColorIndex = 2
             .Selection.Font.Bold = True
 
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeLeft)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeLeft)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeTop).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeRight)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeRight)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideVertical).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideVertical).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Excel.Constants.xlNone
 
             With .ActiveCell.Offset(n2, -1)
                 .Value = "XT*X ="
-                .HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                .HorizontalAlignment = Excel.Constants.xlCenter
                 .Font.Bold = True
                 .Font.Size = 14
             End With
@@ -199,42 +200,42 @@
                 .Subscript = False
                 .OutlineFont = False
                 .Shadow = False
-                .Underline = Microsoft.Office.Interop.Excel.XlUnderlineStyle.xlUnderlineStyleNone
-                .ThemeColor = Microsoft.Office.Interop.Excel.XlThemeColor.xlThemeColorLight1
+                .Underline = Excel.XlUnderlineStyle.xlUnderlineStyleNone
+                .ThemeColor = Excel.XlThemeColor.xlThemeColorLight1
                 .TintAndShade = 0
-                .ThemeFont = Microsoft.Office.Interop.Excel.XlThemeFont.xlThemeFontMinor
+                .ThemeFont = Excel.XlThemeFont.xlThemeFontMinor
             End With
 
             .Cells(4, n3).Select
-            .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Select()
+            .ActiveCell.End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).Select()
 
             .ActiveCell.CurrentRegion.Select()
-            .Selection.HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+            .Selection.HorizontalAlignment = Excel.Constants.xlCenter
             .Selection.Interior.ColorIndex = 2
             .Selection.Font.Bold = True
 
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeLeft)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeLeft)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeTop).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeRight)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeRight)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideVertical).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideVertical).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Excel.Constants.xlNone
 
             With .ActiveCell.Offset(n2, -1)
                 .Value = "(XT*X)-1 ="
-                .HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                .HorizontalAlignment = Excel.Constants.xlCenter
                 .Font.Bold = True
                 .Font.Size = 14
             End With
@@ -247,10 +248,10 @@
                 .Subscript = False
                 .OutlineFont = False
                 .Shadow = False
-                .Underline = Microsoft.Office.Interop.Excel.XlUnderlineStyle.xlUnderlineStyleNone
-                .ThemeColor = Microsoft.Office.Interop.Excel.XlThemeColor.xlThemeColorLight1
+                .Underline = Excel.XlUnderlineStyle.xlUnderlineStyleNone
+                .ThemeColor = Excel.XlThemeColor.xlThemeColorLight1
                 .TintAndShade = 0
-                .ThemeFont = Microsoft.Office.Interop.Excel.XlThemeFont.xlThemeFontMinor
+                .ThemeFont = Excel.XlThemeFont.xlThemeFontMinor
             End With
             With .ActiveCell.Offset(n2, -1).Characters(Start:=7, Length:=1).Font
                 .Name = "Calibri"
@@ -261,10 +262,10 @@
                 .Subscript = False
                 .OutlineFont = False
                 .Shadow = False
-                .Underline = Microsoft.Office.Interop.Excel.XlUnderlineStyle.xlUnderlineStyleNone
-                .ThemeColor = Microsoft.Office.Interop.Excel.XlThemeColor.xlThemeColorLight1
+                .Underline = Excel.XlUnderlineStyle.xlUnderlineStyleNone
+                .ThemeColor = Excel.XlThemeColor.xlThemeColorLight1
                 .TintAndShade = 0
-                .ThemeFont = Microsoft.Office.Interop.Excel.XlThemeFont.xlThemeFontMinor
+                .ThemeFont = Excel.XlThemeFont.xlThemeFontMinor
             End With
             With .ActiveCell.Offset(n2, -1).Characters(Start:=8, Length:=1).Font
                 .Name = "Calibri"
@@ -275,42 +276,42 @@
                 .Subscript = False
                 .OutlineFont = False
                 .Shadow = False
-                .Underline = Microsoft.Office.Interop.Excel.XlUnderlineStyle.xlUnderlineStyleNone
-                .ThemeColor = Microsoft.Office.Interop.Excel.XlThemeColor.xlThemeColorLight1
+                .Underline = Excel.XlUnderlineStyle.xlUnderlineStyleNone
+                .ThemeColor = Excel.XlThemeColor.xlThemeColorLight1
                 .TintAndShade = 0
-                .ThemeFont = Microsoft.Office.Interop.Excel.XlThemeFont.xlThemeFontMinor
+                .ThemeFont = Excel.XlThemeFont.xlThemeFontMinor
             End With
 
             .Cells(4, n3).Select
-            .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Select()
+            .ActiveCell.End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).Select()
 
             .ActiveCell.CurrentRegion.Select()
-            .Selection.HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+            .Selection.HorizontalAlignment = Excel.Constants.xlCenter
             .Selection.Interior.ColorIndex = 2
             .Selection.Font.Bold = True
 
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeLeft)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeLeft)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeTop).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeRight)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeRight)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideVertical).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideVertical).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Excel.Constants.xlNone
 
             With .ActiveCell.Offset(n2, -1)
                 .Value = "XT*Y ="
-                .HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                .HorizontalAlignment = Excel.Constants.xlCenter
                 .Font.Bold = True
                 .Font.Size = 14
             End With
@@ -323,42 +324,42 @@
                 .Subscript = False
                 .OutlineFont = False
                 .Shadow = False
-                .Underline = Microsoft.Office.Interop.Excel.XlUnderlineStyle.xlUnderlineStyleNone
-                .ThemeColor = Microsoft.Office.Interop.Excel.XlThemeColor.xlThemeColorLight1
+                .Underline = Excel.XlUnderlineStyle.xlUnderlineStyleNone
+                .ThemeColor = Excel.XlThemeColor.xlThemeColorLight1
                 .TintAndShade = 0
-                .ThemeFont = Microsoft.Office.Interop.Excel.XlThemeFont.xlThemeFontMinor
+                .ThemeFont = Excel.XlThemeFont.xlThemeFontMinor
             End With
 
             .Cells(4, n3).Select
-            .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Select()
+            .ActiveCell.End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).Select()
 
             .ActiveCell.CurrentRegion.Select()
-            .Selection.HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+            .Selection.HorizontalAlignment = Excel.Constants.xlCenter
             .Selection.Interior.ColorIndex = 2
             .Selection.Font.Bold = True
 
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeLeft)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeLeft)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeTop).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeRight)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeRight)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideVertical).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideVertical).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Excel.Constants.xlNone
 
             With .ActiveCell.Offset(n2, -1)
                 .Value = "B ="
-                .HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                .HorizontalAlignment = Excel.Constants.xlCenter
                 .Font.Bold = True
                 .Font.Size = 14
             End With
@@ -417,10 +418,10 @@
                 .Subscript = False
                 .OutlineFont = False
                 .Shadow = False
-                .Underline = Microsoft.Office.Interop.Excel.XlUnderlineStyle.xlUnderlineStyleNone
-                .ThemeColor = Microsoft.Office.Interop.Excel.XlThemeColor.xlThemeColorLight1
+                .Underline = Excel.XlUnderlineStyle.xlUnderlineStyleNone
+                .ThemeColor = Excel.XlThemeColor.xlThemeColorLight1
                 .TintAndShade = 0
-                .ThemeFont = Microsoft.Office.Interop.Excel.XlThemeFont.xlThemeFontMinor
+                .ThemeFont = Excel.XlThemeFont.xlThemeFontMinor
             End With
             With .Selection.Font
                 .Name = "Calibri"
@@ -430,22 +431,22 @@
                 .Subscript = False
                 .OutlineFont = False
                 .Shadow = False
-                .Underline = Microsoft.Office.Interop.Excel.XlUnderlineStyle.xlUnderlineStyleNone
-                .ThemeColor = Microsoft.Office.Interop.Excel.XlThemeColor.xlThemeColorLight1
+                .Underline = Excel.XlUnderlineStyle.xlUnderlineStyleNone
+                .ThemeColor = Excel.XlThemeColor.xlThemeColorLight1
                 .TintAndShade = 0
-                .ThemeFont = Microsoft.Office.Interop.Excel.XlThemeFont.xlThemeFontMinor
+                .ThemeFont = Excel.XlThemeFont.xlThemeFontMinor
             End With
             .Selection.Font.Bold = False
             .Selection.Font.Bold = True
             With .Selection
-                .HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
-                .VerticalAlignment = Microsoft.Office.Interop.Excel.Constants.xlBottom
+                .HorizontalAlignment = Excel.Constants.xlCenter
+                .VerticalAlignment = Excel.Constants.xlBottom
                 .WrapText = False
                 .Orientation = 0
                 .AddIndent = False
                 .IndentLevel = 0
                 .ShrinkToFit = False
-                .ReadingOrder = Microsoft.Office.Interop.Excel.Constants.xlContext
+                .ReadingOrder = Excel.Constants.xlContext
                 .MergeCells = False
             End With
 
@@ -490,10 +491,10 @@
                 .Subscript = False
                 .OutlineFont = False
                 .Shadow = False
-                .Underline = Microsoft.Office.Interop.Excel.XlUnderlineStyle.xlUnderlineStyleNone
-                .ThemeColor = Microsoft.Office.Interop.Excel.XlThemeColor.xlThemeColorLight1
+                .Underline = Excel.XlUnderlineStyle.xlUnderlineStyleNone
+                .ThemeColor = Excel.XlThemeColor.xlThemeColorLight1
                 .TintAndShade = 0
-                .ThemeFont = Microsoft.Office.Interop.Excel.XlThemeFont.xlThemeFontMinor
+                .ThemeFont = Excel.XlThemeFont.xlThemeFontMinor
             End With
             With .ActiveCell.Characters(Start:=2, Length:=1).Font
                 .Name = "Calibri"
@@ -504,10 +505,10 @@
                 .Subscript = False
                 .OutlineFont = False
                 .Shadow = False
-                .Underline = Microsoft.Office.Interop.Excel.XlUnderlineStyle.xlUnderlineStyleNone
-                .ThemeColor = Microsoft.Office.Interop.Excel.XlThemeColor.xlThemeColorLight1
+                .Underline = Excel.XlUnderlineStyle.xlUnderlineStyleNone
+                .ThemeColor = Excel.XlThemeColor.xlThemeColorLight1
                 .TintAndShade = 0
-                .ThemeFont = Microsoft.Office.Interop.Excel.XlThemeFont.xlThemeFontMinor
+                .ThemeFont = Excel.XlThemeFont.xlThemeFontMinor
             End With
             .Range("I2").Select()
             .ActiveCell.FormulaR1C1 = "R2 AJUST"
@@ -520,10 +521,10 @@
                 .Subscript = False
                 .OutlineFont = False
                 .Shadow = False
-                .Underline = Microsoft.Office.Interop.Excel.XlUnderlineStyle.xlUnderlineStyleNone
-                .ThemeColor = Microsoft.Office.Interop.Excel.XlThemeColor.xlThemeColorLight1
+                .Underline = Excel.XlUnderlineStyle.xlUnderlineStyleNone
+                .ThemeColor = Excel.XlThemeColor.xlThemeColorLight1
                 .TintAndShade = 0
-                .ThemeFont = Microsoft.Office.Interop.Excel.XlThemeFont.xlThemeFontMinor
+                .ThemeFont = Excel.XlThemeFont.xlThemeFontMinor
             End With
             With .ActiveCell.Characters(Start:=2, Length:=1).Font
                 .Name = "Calibri"
@@ -534,10 +535,10 @@
                 .Subscript = False
                 .OutlineFont = False
                 .Shadow = False
-                .Underline = Microsoft.Office.Interop.Excel.XlUnderlineStyle.xlUnderlineStyleNone
-                .ThemeColor = Microsoft.Office.Interop.Excel.XlThemeColor.xlThemeColorLight1
+                .Underline = Excel.XlUnderlineStyle.xlUnderlineStyleNone
+                .ThemeColor = Excel.XlThemeColor.xlThemeColorLight1
                 .TintAndShade = 0
-                .ThemeFont = Microsoft.Office.Interop.Excel.XlThemeFont.xlThemeFontMinor
+                .ThemeFont = Excel.XlThemeFont.xlThemeFontMinor
             End With
             With .ActiveCell.Characters(Start:=3, Length:=6).Font
                 .Name = "Calibri"
@@ -548,10 +549,10 @@
                 .Subscript = False
                 .OutlineFont = False
                 .Shadow = False
-                .Underline = Microsoft.Office.Interop.Excel.XlUnderlineStyle.xlUnderlineStyleNone
-                .ThemeColor = Microsoft.Office.Interop.Excel.XlThemeColor.xlThemeColorLight1
+                .Underline = Excel.XlUnderlineStyle.xlUnderlineStyleNone
+                .ThemeColor = Excel.XlThemeColor.xlThemeColorLight1
                 .TintAndShade = 0
-                .ThemeFont = Microsoft.Office.Interop.Excel.XlThemeFont.xlThemeFontMinor
+                .ThemeFont = Excel.XlThemeFont.xlThemeFontMinor
             End With
             .Range("M2").Select()
             .ActiveCell.FormulaR1C1 = "o2"
@@ -564,10 +565,10 @@
                 .Subscript = False
                 .OutlineFont = False
                 .Shadow = False
-                .Underline = Microsoft.Office.Interop.Excel.XlUnderlineStyle.xlUnderlineStyleNone
-                .ThemeColor = Microsoft.Office.Interop.Excel.XlThemeColor.xlThemeColorLight1
+                .Underline = Excel.XlUnderlineStyle.xlUnderlineStyleNone
+                .ThemeColor = Excel.XlThemeColor.xlThemeColorLight1
                 .TintAndShade = 0
-                .ThemeFont = Microsoft.Office.Interop.Excel.XlThemeFont.xlThemeFontMinor
+                .ThemeFont = Excel.XlThemeFont.xlThemeFontMinor
             End With
             With .ActiveCell.Characters(Start:=2, Length:=1).Font
                 .Name = "Calibri"
@@ -578,10 +579,10 @@
                 .Subscript = False
                 .OutlineFont = False
                 .Shadow = False
-                .Underline = Microsoft.Office.Interop.Excel.XlUnderlineStyle.xlUnderlineStyleNone
-                .ThemeColor = Microsoft.Office.Interop.Excel.XlThemeColor.xlThemeColorLight1
+                .Underline = Excel.XlUnderlineStyle.xlUnderlineStyleNone
+                .ThemeColor = Excel.XlThemeColor.xlThemeColorLight1
                 .TintAndShade = 0
-                .ThemeFont = Microsoft.Office.Interop.Excel.XlThemeFont.xlThemeFontMinor
+                .ThemeFont = Excel.XlThemeFont.xlThemeFontMinor
             End With
 
         End With
@@ -595,301 +596,301 @@
 
 
             n = (.Cells(2, 2).Value) / 2
-            n2 = .Cells(4, .Columns.Count).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).Column
+            n2 = .Cells(4, .Columns.Count).End(Excel.XlDirection.xlToLeft).End(Excel.XlDirection.xlToLeft).Column
             n3 = (.Cells(1, 2).Value) / 2
             .Cells(4, n2).Select()
-            .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown) _
-                .End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Select()
+            .ActiveCell.End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown) _
+                .End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).Select()
 
             .ActiveCell.CurrentRegion.Select()
-            .Selection.HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+            .Selection.HorizontalAlignment = Excel.Constants.xlCenter
             .Selection.Interior.ColorIndex = 2
             .Selection.Font.Bold = True
 
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeLeft)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeLeft)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeTop).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeRight)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeRight)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideVertical).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideVertical).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Excel.Constants.xlNone
 
             With .ActiveCell.Offset(n, -1)
                 .Value = " VarCov B ="
-                .HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                .HorizontalAlignment = Excel.Constants.xlCenter
                 .Font.Bold = True
                 .Font.Size = 10
             End With
 
             .Cells(4, n2).Select
-            .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown) _
-                    .End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown) _
-                    .End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Select()
+            .ActiveCell.End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown) _
+                    .End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown) _
+                    .End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).Select()
 
             .ActiveCell.CurrentRegion.Select()
-            .Selection.HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+            .Selection.HorizontalAlignment = Excel.Constants.xlCenter
             .Selection.Interior.ColorIndex = 2
             .Selection.Font.Bold = True
 
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeLeft)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeLeft)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeTop).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeRight)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeRight)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideVertical).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideVertical).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Excel.Constants.xlNone
 
             With .ActiveCell.Offset(n, -1)
                 .Value = " Var B ="
-                .HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                .HorizontalAlignment = Excel.Constants.xlCenter
                 .Font.Bold = True
                 .Font.Size = 14
             End With
             '##############
             .Cells(4, n2).Select
-            .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown) _
-.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown) _
-.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Select()
+            .ActiveCell.End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown) _
+.End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown) _
+.End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).Select()
 
             .ActiveCell.CurrentRegion.Select()
-            .Selection.HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+            .Selection.HorizontalAlignment = Excel.Constants.xlCenter
             .Selection.Interior.ColorIndex = 2
             .Selection.Font.Bold = True
 
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeLeft)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeLeft)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeTop).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeRight)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeRight)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideVertical).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideVertical).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Excel.Constants.xlNone
 
             With .ActiveCell.Offset(n, -1)
                 .Value = " ee B ="
-                .HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                .HorizontalAlignment = Excel.Constants.xlCenter
                 .Font.Bold = True
                 .Font.Size = 14
             End With
 
             '##############
             .Cells(4, n2).Select()
-            .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown) _
-.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown) _
-.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Select()
+            .ActiveCell.End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown) _
+.End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown) _
+.End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).Select()
 
             .ActiveCell.CurrentRegion.Select()
-            .Selection.HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+            .Selection.HorizontalAlignment = Excel.Constants.xlCenter
             .Selection.Interior.ColorIndex = 2
             .Selection.Font.Bold = True
 
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeLeft)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeLeft)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeTop).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeRight)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeRight)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideVertical).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideVertical).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Excel.Constants.xlNone
 
             With .ActiveCell.Offset(n, -1)
                 .Value = "B ="
-                .HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                .HorizontalAlignment = Excel.Constants.xlCenter
                 .Font.Bold = True
                 .Font.Size = 14
             End With
             With .ActiveCell.Offset(-1, 0)
                 .Value = "t"
-                .HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                .HorizontalAlignment = Excel.Constants.xlCenter
                 .Font.Bold = True
                 .Font.Size = 14
             End With
             With .ActiveCell.Offset(-1, 1)
                 .Value = "Prob t"
-                .HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                .HorizontalAlignment = Excel.Constants.xlCenter
                 .Font.Bold = True
                 .Font.Size = 14
             End With
 
             '#################################################################
-            .Cells(.Rows.Count, 2).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Select()
+            .Cells(.Rows.Count, 2).End(Excel.XlDirection.xlUp).End(Excel.XlDirection.xlUp).Select()
             .ActiveCell.CurrentRegion.Select()
-            .Selection.HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+            .Selection.HorizontalAlignment = Excel.Constants.xlCenter
             .Selection.Interior.ColorIndex = 2
             .Selection.Font.Bold = True
 
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeLeft)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeLeft)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeTop).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeRight)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeRight)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideVertical).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideVertical).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Excel.Constants.xlNone
 
             With .ActiveCell.Offset(n3, -1)
                 .Value = "Y' = "
-                .HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                .HorizontalAlignment = Excel.Constants.xlCenter
                 .Font.Bold = True
                 .Font.Size = 14
             End With
 
-            .Cells(.Rows.Count, 4).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Select
+            .Cells(.Rows.Count, 4).End(Excel.XlDirection.xlUp).End(Excel.XlDirection.xlUp).Select
 
             .ActiveCell.CurrentRegion.Select()
-            .Selection.HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+            .Selection.HorizontalAlignment = Excel.Constants.xlCenter
             .Selection.Interior.ColorIndex = 2
             .Selection.Font.Bold = True
 
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeLeft)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeLeft)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeTop).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeRight)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeRight)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideVertical).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideVertical).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Excel.Constants.xlNone
 
             With .ActiveCell.Offset(n3, -1)
                 .Value = "(Y-Y')^2="
-                .HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                .HorizontalAlignment = Excel.Constants.xlCenter
                 .Font.Bold = True
                 .Font.Size = 9
             End With
 
-            .Cells(.Rows.Count, 6).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Select
+            .Cells(.Rows.Count, 6).End(Excel.XlDirection.xlUp).End(Excel.XlDirection.xlUp).Select
 
             .ActiveCell.CurrentRegion.Select()
-            .Selection.HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+            .Selection.HorizontalAlignment = Excel.Constants.xlCenter
             .Selection.Interior.ColorIndex = 2
             .Selection.Font.Bold = True
 
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeLeft)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeLeft)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeTop).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeRight)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDouble
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeTop).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlEdgeBottom).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeRight)
+                .LineStyle = Excel.XlLineStyle.xlDouble
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick
+                .Weight = Excel.XlBorderWeight.xlThick
             End With
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideVertical).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideVertical).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlInsideHorizontal).LineStyle = Excel.Constants.xlNone
 
             With .ActiveCell.Offset(n3, -1)
                 .Value = "(Y-Yprom)^2= "
-                .HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                .HorizontalAlignment = Excel.Constants.xlCenter
                 .Font.Bold = True
                 .Font.Size = 9
             End With
 
             .Range("A1:N2").Select()
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Microsoft.Office.Interop.Excel.Constants.xlNone
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeLeft)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalDown).LineStyle = Excel.Constants.xlNone
+            .Selection.Borders(Excel.XlBordersIndex.xlDiagonalUp).LineStyle = Excel.Constants.xlNone
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeLeft)
+                .LineStyle = Excel.XlLineStyle.xlContinuous
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlMedium
+                .Weight = Excel.XlBorderWeight.xlMedium
             End With
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeTop)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeTop)
+                .LineStyle = Excel.XlLineStyle.xlContinuous
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlMedium
+                .Weight = Excel.XlBorderWeight.xlMedium
             End With
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeBottom)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeBottom)
+                .LineStyle = Excel.XlLineStyle.xlContinuous
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlMedium
+                .Weight = Excel.XlBorderWeight.xlMedium
             End With
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlEdgeRight)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            With .Selection.Borders(Excel.XlBordersIndex.xlEdgeRight)
+                .LineStyle = Excel.XlLineStyle.xlContinuous
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlMedium
+                .Weight = Excel.XlBorderWeight.xlMedium
             End With
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideVertical)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            With .Selection.Borders(Excel.XlBordersIndex.xlInsideVertical)
+                .LineStyle = Excel.XlLineStyle.xlContinuous
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlMedium
+                .Weight = Excel.XlBorderWeight.xlMedium
             End With
-            With .Selection.Borders(Microsoft.Office.Interop.Excel.XlBordersIndex.xlInsideHorizontal)
-                .LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous
-                .ColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
+            With .Selection.Borders(Excel.XlBordersIndex.xlInsideHorizontal)
+                .LineStyle = Excel.XlLineStyle.xlContinuous
+                .ColorIndex = Excel.Constants.xlAutomatic
                 .TintAndShade = 0
-                .Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlMedium
+                .Weight = Excel.XlBorderWeight.xlMedium
             End With
 
             Dim rangoTitulos(6) As String
@@ -908,14 +909,14 @@
                 .Range(rangoTitulos(i)).Select()
 
                 With .Selection.Interior
-                    .Pattern = Microsoft.Office.Interop.Excel.Constants.xlSolid
-                    .PatternColorIndex = Microsoft.Office.Interop.Excel.Constants.xlAutomatic
-                    .ThemeColor = Microsoft.Office.Interop.Excel.XlThemeColor.xlThemeColorAccent1
+                    .Pattern = Excel.Constants.xlSolid
+                    .PatternColorIndex = Excel.Constants.xlAutomatic
+                    .ThemeColor = Excel.XlThemeColor.xlThemeColorAccent1
                     .TintAndShade = 0
                     .PatternTintAndShade = 0
                 End With
                 With .Selection.Font
-                    .ThemeColor = Microsoft.Office.Interop.Excel.XlThemeColor.xlThemeColorDark1
+                    .ThemeColor = Excel.XlThemeColor.xlThemeColorDark1
                     .TintAndShade = 0
                 End With
 

@@ -1,9 +1,10 @@
-﻿Module CC02_FormatoHojaHipotesis
+﻿Imports Microsoft.Office.Interop
+Module CC02_FormatoHojaHipotesis
 
     Public Sub formatoTitulosHipotesis()
 
         Dim hojaActiva As Excel.Worksheet = Globals.ThisAddIn.Application.ActiveSheet
-        Dim nFil As Long = Globals.ThisAddIn.Application.ActiveSheet.Cells(Globals.ThisAddIn.Application.ActiveSheet.Rows.Count, 2).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Row
+        Dim nFil As Long = Globals.ThisAddIn.Application.ActiveSheet.Cells(Globals.ThisAddIn.Application.ActiveSheet.Rows.Count, 2).End(Excel.XlDirection.xlUp).Row
         Dim rangoB As Excel.Range = hojaActiva.Range(Globals.ThisAddIn.Application.ActiveSheet.Cells(1, 2), Globals.ThisAddIn.Application.ActiveSheet.Cells(nFil, 2))
 
         'MsgBox(CStr(nFil) + Chr(13) + rangoB.Address + Chr(13) + hojaActiva.Name)
@@ -11,15 +12,14 @@
         hojaActiva.Columns("B:B").ColumnWidth = 16.71
         rangoB.NumberFormat = "#,##0.00"
 
-
         Globals.ThisAddIn.Application.Range("E1:N1").Select()
         With Globals.ThisAddIn.Application.Selection
 
             .Merge()
-            .HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
-            .VerticalAlignment = Microsoft.Office.Interop.Excel.Constants.xlBottom
+            .HorizontalAlignment = Excel.Constants.xlCenter
+            .VerticalAlignment = Excel.Constants.xlBottom
             .Font.Bold = True
-            .Font.ThemeColor = Microsoft.Office.Interop.Excel.XlThemeColor.xlThemeColorAccent5
+            .Font.ThemeColor = Excel.XlThemeColor.xlThemeColorAccent5
             .Font.TintAndShade = 0
             .Font.Size = 12
 
@@ -42,7 +42,7 @@
         For i = 0 To celdas.Length
             With Globals.ThisAddIn.Application.Range(celdas(i))
                 .Font.Bold = True
-                .Font.ThemeColor = Microsoft.Office.Interop.Excel.XlThemeColor.xlThemeColorAccent5
+                .Font.ThemeColor = Excel.XlThemeColor.xlThemeColorAccent5
                 .Font.TintAndShade = 0
             End With
         Next

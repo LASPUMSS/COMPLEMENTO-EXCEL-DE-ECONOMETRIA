@@ -12,8 +12,7 @@
 			<button onAction="btn_CudAnov" id="CudAnov" label="Cuadro De Anova" size="normal" imageMso="ChartTypeOtherInsertGallery" supertip=" Genera un cuadro ANOVA, dado un modelo RLUV. (Antes de usar esta herramienta debe generar una hoja hipotesis, caso contrario el metodo no funcionara)"/>
         </group>
 		  <group id="Grupo_RLVV" label="REGRESION MCO PARA UNA VARIABLE">
-			<button onAction="btn_RLVV" id="RLVV" label="RLUV" size="large" imageMso="Chart3DColumnChart" supertip="Realiza una regresión por MCO con una variable independiente"/>
-
+			<button onAction="btn_RLVV" id="RLVV" label="RLVV" size="large" imageMso="Chart3DColumnChart" supertip="Realiza una regresión por MCO con una variable independiente"/>
 		  </group>
       </tab>
     </tabs>

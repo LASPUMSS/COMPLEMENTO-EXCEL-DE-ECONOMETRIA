@@ -63,7 +63,7 @@ Partial Class UF_GGD
         Me.txt_SigX.Name = "txt_SigX"
         Me.txt_SigX.Size = New System.Drawing.Size(240, 22)
         Me.txt_SigX.TabIndex = 9
-        Me.txt_SigX.Text = "N/A"
+        Me.txt_SigX.Text = "NA"
         '
         'txt_SigY
         '
@@ -71,7 +71,7 @@ Partial Class UF_GGD
         Me.txt_SigY.Name = "txt_SigY"
         Me.txt_SigY.Size = New System.Drawing.Size(240, 22)
         Me.txt_SigY.TabIndex = 8
-        Me.txt_SigY.Text = "N/A"
+        Me.txt_SigY.Text = "NA"
         '
         'txt_RgX
         '

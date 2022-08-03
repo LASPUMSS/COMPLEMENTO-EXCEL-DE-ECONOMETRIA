@@ -1,4 +1,6 @@
-﻿Module BB04_RLVV
+﻿Imports Microsoft.Office.Interop
+Module BB04_RLVV
+
     Public Sub metodoPrincipalRLVV(ByVal txt_RgX As String, ByVal txt_RgY As String)
         copiarDatosRLVV(txt_RgX, txt_RgY)
 
@@ -78,7 +80,7 @@
             Dim PI_MTX As String
             Dim PF_MTX As String
 
-            .Cells(4, .Columns.Count).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).Offset(0, 3).Select()
+            .Cells(4, .Columns.Count).End(Excel.XlDirection.xlToLeft).Offset(0, 3).Select()
             PI_MTX = .ActiveCell.Address
             .ActiveCell.Offset(colX - 1, filasX - 1).Select()
             PF_MTX = .ActiveCell.Address
@@ -104,7 +106,7 @@
 
             .Cells(4, 2).Select
             PIF_MY = .ActiveCell.Row
-            PFF_MY = .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Row
+            PFF_MY = .ActiveCell.End(Excel.XlDirection.xlDown).Row
             PIC_MY = .ActiveCell.Column
 
             'UBICACION DE LA MATRIZ X
@@ -115,9 +117,9 @@
 
             .Cells(4, 5).Select
             PIF_MX = .ActiveCell.Row
-            PFF_MX = .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Row
+            PFF_MX = .ActiveCell.End(Excel.XlDirection.xlDown).Row
             PIC_MX = .ActiveCell.Column
-            PFC_MX = .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlToRight).Column
+            PFC_MX = .ActiveCell.End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlToRight).Column
 
             'UBICACION DE LA MATRIZ TRANPUESTA X
             Dim PIF_MTX As Long
@@ -125,11 +127,11 @@
             Dim PIC_MTX As Long
             Dim PFC_MTX As Long
 
-            .Cells(4, .Columns.Count).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).Select()
+            .Cells(4, .Columns.Count).End(Excel.XlDirection.xlToLeft).End(Excel.XlDirection.xlToLeft).Select()
             PIF_MTX = .ActiveCell.Row
-            PFF_MTX = .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Row
+            PFF_MTX = .ActiveCell.End(Excel.XlDirection.xlDown).Row
             PIC_MTX = .ActiveCell.Column
-            PFC_MTX = .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlToRight).Column
+            PFC_MTX = .ActiveCell.End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlToRight).Column
 
 
             '#################################################################
@@ -149,10 +151,10 @@
             filasY = .Range("B1").Value
             colY = .Range("B2").Value
 
-            .Cells(4, .Columns.Count).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).Select()
+            .Cells(4, .Columns.Count).End(Excel.XlDirection.xlToLeft).End(Excel.XlDirection.xlToLeft).Select()
             n = .ActiveCell.Column
 
-            .Cells(.Rows.Count, n).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Offset(3, 0).Select()
+            .Cells(.Rows.Count, n).End(Excel.XlDirection.xlUp).Offset(3, 0).Select()
             PI_M = .ActiveCell.Address
 
             .ActiveCell.Offset(colX - 1, colX - 1).Select()
@@ -171,16 +173,16 @@
             Dim PFC_MTXX As Long
 
             PIF_MTXX = .ActiveCell.Row
-            PFF_MTXX = .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Row
+            PFF_MTXX = .ActiveCell.End(Excel.XlDirection.xlDown).Row
             PIC_MTXX = .ActiveCell.Column
-            PFC_MTXX = .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlToRight).Column
+            PFC_MTXX = .ActiveCell.End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlToRight).Column
 
 
             '#################################################################
-            .Cells(4, .Columns.Count).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).Select()
+            .Cells(4, .Columns.Count).End(Excel.XlDirection.xlToLeft).End(Excel.XlDirection.xlToLeft).Select()
             n = .ActiveCell.Column
 
-            .Cells(.Rows.Count, n).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Offset(3, 0).Select()
+            .Cells(.Rows.Count, n).End(Excel.XlDirection.xlUp).Offset(3, 0).Select()
             PI_M = .ActiveCell.Address
 
             .ActiveCell.Offset(colX - 1, colX - 1).Select()
@@ -197,17 +199,17 @@
             Dim PFC_MTXIN As Long
 
             PIF_MTXIN = .ActiveCell.Row
-            PFF_MTXIN = .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Row
+            PFF_MTXIN = .ActiveCell.End(Excel.XlDirection.xlDown).Row
             PIC_MTXIN = .ActiveCell.Column
-            PFC_MTXIN = .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlToRight).Column
+            PFC_MTXIN = .ActiveCell.End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlToRight).Column
 
 
             '#################################################################
 
-            .Cells(4, .Columns.Count).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).Select()
+            .Cells(4, .Columns.Count).End(Excel.XlDirection.xlToLeft).End(Excel.XlDirection.xlToLeft).Select()
             n = .ActiveCell.Column
 
-            .Cells(.Rows.Count, n).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Offset(3, 0).Select()
+            .Cells(.Rows.Count, n).End(Excel.XlDirection.xlUp).Offset(3, 0).Select()
             PI_M = .ActiveCell.Address
 
             .ActiveCell.Offset(colX - 1, 0).Select()
@@ -224,16 +226,16 @@
             Dim PIC_MTXY As Long
 
             PIF_MTXY = .ActiveCell.Row
-            PFF_MTXY = .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Row
+            PFF_MTXY = .ActiveCell.End(Excel.XlDirection.xlDown).Row
             PIC_MTXY = .ActiveCell.Column
 
 
             '#################################################################
 
-            .Cells(4, .Columns.Count).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).Select()
+            .Cells(4, .Columns.Count).End(Excel.XlDirection.xlToLeft).End(Excel.XlDirection.xlToLeft).Select()
             n = .ActiveCell.Column
 
-            .Cells(.Rows.Count, n).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Offset(3, 0).Select()
+            .Cells(.Rows.Count, n).End(Excel.XlDirection.xlUp).Offset(3, 0).Select()
             PI_M = .ActiveCell.Address
 
             .ActiveCell.Offset(colX - 1, 0).Select()
@@ -260,7 +262,7 @@
 
 
             PIF_MY = .Cells(4, 2).Row
-            PFF_MY = .Cells(4, 2).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Row
+            PFF_MY = .Cells(4, 2).End(Excel.XlDirection.xlDown).Row
             PC_MY = .Cells(4, 2).Column
 
 
@@ -272,9 +274,9 @@
 
             .Cells(4, 5).Select()
             PIF_MX = .ActiveCell.Row
-            PFF_MX = .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Row
+            PFF_MX = .ActiveCell.End(Excel.XlDirection.xlDown).Row
             PIC_MX = .Cells(4, 5).Column
-            PFC_MX = .Cells(4, 5).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlToRight).Column
+            PFC_MX = .Cells(4, 5).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlToRight).Column
 
             ''UBICACION DE DE LA MATRIZ BETAS Y DE LAS BETAS
             '
@@ -283,16 +285,16 @@
             Dim PC_MB As Long
 
             Dim n1 As Long
-            n1 = .Cells(4, .Columns.Count).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).Column
+            n1 = .Cells(4, .Columns.Count).End(Excel.XlDirection.xlToLeft).End(Excel.XlDirection.xlToLeft).Column
 
-            .Cells(.Rows.Count, n1).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Select()
+            .Cells(.Rows.Count, n1).End(Excel.XlDirection.xlUp).Select()
             PFF_MB = .ActiveCell.Row
-            PIF_MB = .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Row
+            PIF_MB = .ActiveCell.End(Excel.XlDirection.xlUp).Row
             PC_MB = n1
 
 
             'DETERMINACION DE LA MATRIZ DE Y ESTIMADA
-            .Cells(4, 2).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Offset(4, 0).Select()
+            .Cells(4, 2).End(Excel.XlDirection.xlDown).Offset(4, 0).Select()
             Dim PIF_YE As String
             PIF_YE = .ActiveCell.Address
 
@@ -335,9 +337,9 @@
 
             PC_MSRC = 4
 
-            .Cells(.Rows.Count, PC_MSRC).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Select()
+            .Cells(.Rows.Count, PC_MSRC).End(Excel.XlDirection.xlUp).Select()
             PFF_MSRC = .ActiveCell.Row
-            PIF_MSRC = .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Row
+            PIF_MSRC = .ActiveCell.End(Excel.XlDirection.xlUp).Row
 
             .Cells(2, 6).Select()
             .ActiveCell.FormulaR1C1 = "=SUM(R" & PIF_MSRC & "C" & PC_MSRC & ":R" & PFF_MSRC & "C" & PC_MSRC & ")"
@@ -348,9 +350,9 @@
             Dim PC_MSTC As Long
             PC_MSTC = 6
 
-            .Cells(.Rows.Count, PC_MSRC).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Select()
+            .Cells(.Rows.Count, PC_MSRC).End(Excel.XlDirection.xlUp).Select()
             PFF_MSTC = .ActiveCell.Row
-            PIF_MSTC = .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Row
+            PIF_MSTC = .ActiveCell.End(Excel.XlDirection.xlUp).Row
 
             .Cells(1, 8).Select()
             .ActiveCell.FormulaR1C1 = "=SUM(R" & PIF_MSTC & "C" & PC_MSTC & ":R" & PFF_MSTC & "C" & PC_MSTC & ")"
@@ -369,9 +371,9 @@
             Dim i2 As Long
             Dim i3 As Long
 
-            .Cells(4, .Columns.Count).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).Select()
+            .Cells(4, .Columns.Count).End(Excel.XlDirection.xlToLeft).End(Excel.XlDirection.xlToLeft).Select()
             n = .ActiveCell.Column
-            .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Select()
+            .ActiveCell.End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).Select()
 
             fila = .ActiveCell.Row
             col = .ActiveCell.Column
@@ -380,7 +382,7 @@
             i2 = 0
             i3 = 0
 
-            .Cells(.Rows.Count, n).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Offset(4, 0).Select()
+            .Cells(.Rows.Count, n).End(Excel.XlDirection.xlUp).Offset(4, 0).Select()
 
             For i3 = 0 To .Cells(2, 2).Value - 1 Step 1
 
@@ -397,11 +399,11 @@
 
             Dim aux As Excel.Range
             Dim aux2 As Excel.Range
-            .Cells(.Rows.Count, n).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Select()
+            .Cells(.Rows.Count, n).End(Excel.XlDirection.xlUp).End(Excel.XlDirection.xlUp).Select()
             fila = .ActiveCell.Row
             col = .ActiveCell.Column
             aux = .ActiveCell
-            .Cells(.Rows.Count, n).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Offset(4, 0).Select()
+            .Cells(.Rows.Count, n).End(Excel.XlDirection.xlUp).Offset(4, 0).Select()
             aux2 = .ActiveCell
 
             i = 0
@@ -427,7 +429,7 @@
             Dim n2 As Long
             n2 = .Cells(2, 2).Value
             n2 = n2 + 3
-            .Cells(.Rows.Count, n).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Select()
+            .Cells(.Rows.Count, n).End(Excel.XlDirection.xlUp).End(Excel.XlDirection.xlUp).Select()
 
             Do While CStr(.ActiveCell.Value) <> ""
                 .ActiveCell.Offset(n2, 0).FormulaR1C1 = "=SQRT(R[-" & n2 & "]C)"
@@ -436,8 +438,8 @@
 
             '#######################################################################
 
-            .Cells(4, .Columns.Count).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).End(Microsoft.Office.Interop.Excel.XlDirection.xlToLeft).Select()
-            .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).End(Microsoft.Office.Interop.Excel.XlDirection.xlDown).Select()
+            .Cells(4, .Columns.Count).End(Excel.XlDirection.xlToLeft).End(Excel.XlDirection.xlToLeft).Select()
+            .ActiveCell.End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).End(Excel.XlDirection.xlDown).Select()
             fila = .ActiveCell.Row
             col = .ActiveCell.Column
 
@@ -445,7 +447,7 @@
             i2 = 0
             i3 = 0
 
-            .Cells(.Rows.Count, n).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Select()
+            .Cells(.Rows.Count, n).End(Excel.XlDirection.xlUp).End(Excel.XlDirection.xlUp).Select()
 
             Do While CStr(.ActiveCell.Value) <> ""
                 .ActiveCell.Offset(n2, 0).FormulaR1C1 = "=R" & fila + i & "C" & col & "/R[-" & n2 & "]C"
@@ -455,7 +457,7 @@
 
             '#######################################################################
 
-            .Cells(.Rows.Count, n).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Select()
+            .Cells(.Rows.Count, n).End(Excel.XlDirection.xlUp).End(Excel.XlDirection.xlUp).Select()
 
             Do While CStr(.ActiveCell.Value) <> ""
                 .ActiveCell.Offset(0, 1).FormulaR1C1 = "=T.DIST.2T(ABS(RC[-1]),R1C4)"
@@ -467,4 +469,5 @@
         AJUSTE_04()
 
     End Sub
+
 End Module

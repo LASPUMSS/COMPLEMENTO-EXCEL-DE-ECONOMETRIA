@@ -1,4 +1,5 @@
-﻿Module CC04_IntervaloDeConfianza
+﻿Imports Microsoft.Office.Interop
+Module CC04_IntervaloDeConfianza
     Public Sub intervaloDeConfianzaMet(ByVal txt_NvSf As String, ByVal ComB_Betas As String)
         On Error Resume Next
 
@@ -15,7 +16,7 @@
             If filaInicial = "DETERMINACION DE BETAS" And filaFinal = "SEC" And titulo = "PRUEBAS DE HIPOTESIS, TABLAS RESUMEN, CUADROS ANOVA, P VALOR Y INTERVALOS DE CONFIANZA" Then
 
                 .Cells(Globals.ThisAddIn.Application.ActiveSheet.Rows.Count, 5).Select()
-                .ActiveCell.End(Microsoft.Office.Interop.Excel.XlDirection.xlUp).Select()
+                .ActiveCell.End(Excel.XlDirection.xlUp).Select()
                 .ActiveCell.Offset(4, 0).Select()
 
                 .ActiveCell.Value = "Intervalo de confianza:"
@@ -24,7 +25,7 @@
                     .TintAndShade = 0
                     .Bold = True
                 End With
-                .Selection.Font.Underline = Microsoft.Office.Interop.Excel.XlUnderlineStyle.xlUnderlineStyleSingle
+                .Selection.Font.Underline = Excel.XlUnderlineStyle.xlUnderlineStyleSingle
                 .ActiveCell.Offset(1, 0).Value = "De " & ComB_Betas & ", a un nivel de significancia de " _
                 & txt_NvSf
                 .ActiveCell.Offset(1, 0).Font.Bold = True
@@ -39,33 +40,33 @@
                     .Subscript = True
                     .OutlineFont = False
                     .Shadow = False
-                    .Underline = Microsoft.Office.Interop.Excel.XlUnderlineStyle.xlUnderlineStyleNone
-                    .ThemeColor = Microsoft.Office.Interop.Excel.XlThemeColor.xlThemeColorLight1
+                    .Underline = Excel.XlUnderlineStyle.xlUnderlineStyleNone
+                    .ThemeColor = Excel.XlThemeColor.xlThemeColorLight1
                     .TintAndShade = 0
-                    .ThemeFont = Microsoft.Office.Interop.Excel.XlThemeFont.xlThemeFontMinor
+                    .ThemeFont = Excel.XlThemeFont.xlThemeFontMinor
                 End With
 
 
                 .ActiveCell.Offset(1, 5).Font.Bold = True
-                .ActiveCell.Offset(1, 5).HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                .ActiveCell.Offset(1, 5).HorizontalAlignment = Excel.Constants.xlCenter
                 .ActiveCell.Offset(1, 6).FormulaR1C1 = "=T.INV.2T(" & txt_NvSf & ",R10C2)"
 
                 If ComB_Betas = "BETA 1" Then
                     .ActiveCell.Offset(2, 2).FormulaR1C1 = "=R6C2-R18C2*R[-1]C[4]"
-                    .ActiveCell.Offset(2, 2).HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                    .ActiveCell.Offset(2, 2).HorizontalAlignment = Excel.Constants.xlCenter
                     .ActiveCell.Offset(2, 3).Value = "B"
-                    .ActiveCell.Offset(2, 3).HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                    .ActiveCell.Offset(2, 3).HorizontalAlignment = Excel.Constants.xlCenter
                     .ActiveCell.Offset(2, 3).Font.Bold = True
                     .ActiveCell.Offset(2, 4).FormulaR1C1 = "=R6C2+R18C2*R[-1]C[2]"
-                    .ActiveCell.Offset(2, 4).HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                    .ActiveCell.Offset(2, 4).HorizontalAlignment = Excel.Constants.xlCenter
                 ElseIf ComB_Betas = "BETA 2" Then
                     .ActiveCell.Offset(2, 2).FormulaR1C1 = "=R5C2-R15C2*R[-1]C[4]"
-                    .ActiveCell.Offset(2, 2).HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                    .ActiveCell.Offset(2, 2).HorizontalAlignment = Excel.Constants.xlCenter
                     .ActiveCell.Offset(2, 3).Value = "B"
-                    .ActiveCell.Offset(2, 3).HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                    .ActiveCell.Offset(2, 3).HorizontalAlignment = Excel.Constants.xlCenter
                     .ActiveCell.Offset(2, 3).Font.Bold = True
                     .ActiveCell.Offset(2, 4).FormulaR1C1 = "=R5C2+R15C2*R[-1]C[2]"
-                    .ActiveCell.Offset(2, 4).HorizontalAlignment = Microsoft.Office.Interop.Excel.Constants.xlCenter
+                    .ActiveCell.Offset(2, 4).HorizontalAlignment = Excel.Constants.xlCenter
                 End If
             Else
 
@@ -74,4 +75,5 @@
             End If
         End With
     End Sub
+
 End Module
