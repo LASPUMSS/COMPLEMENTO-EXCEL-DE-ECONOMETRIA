@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <base target="_top">
+    <?!= include('CSS'); ?>
+    
+    <script>
+
+        function cargarRangoY() {
+          google.script.run.withSuccessHandler(onSuccessY).recogerNombreCeldas();
+        }
+
+        function onSuccessY(numUnread) {
+          var n1 = document.getElementById('n1');
+          n1.value = numUnread;
+        }
+
+        function cargarRangoX() {
+         google.script.run.withSuccessHandler(onSuccessX).recogerNombreCeldas();
+        }
+
+        function onSuccessX(numUnread) {
+          var n2 = document.getElementById('n2');
+          n2.value = numUnread;
+        }
+
+        function correrRLUV(){
+          var rangoY = document.getElementById('n1').value;
+          var rangoX = document.getElementById('n2').value;
+          var sigY = document.getElementById('txt_Y').value;
+          var sigX = document.getElementById('txt_X').value;
+          google.script.run.correrModeloRLUV(rangoY, rangoX, sigY, sigX);
+        }
+
+    </script>
+
+  </head>
+  <body>
+      
+    <div class="contenedor">
+
+        <div class="form-comp form-comp-inputs">
+
+          <label>Rango Y:  </label>
+          <input type="text" id="n1" class="form-comp-txt" placeholder="Variable Dependiente" required>
+          <button id="btn_RY" onClick="return cargarRangoY();" class="btn share">R</button>
+
+        </div>
+
+        <div class="form-comp" class="">
+
+          <label>Significado Y:  </label>
+          <input type="text" id="txt_Y" class="txt_XY" value="N/A">
+
+        </div>
+
+        <div class="form-comp form-comp-inputs">
+
+          <label>Rango X:  </label>
+          <input type="text" id="n2" class="form-comp-txt" placeholder="Variable Independite" required>
+          <button id="btn_RX" onClick="return cargarRangoX();" class="btn share">R</button>
+
+        </div>
+
+        <div class="form-comp" class="">
+
+          <label>Significado X:  </label>
+          <input type="text" id="txt_X" class="txt_XY" value="N/A">
+
+        </div>
+
+        <div class="form-comp" class="">
+
+          <button id="btn_Aceptar" onClick="return correrRLUV();" class="action">ACEPTAR</button>
+
+        </div>
+
+    </div>
+
+  </body>
+
+</html>
