@@ -12,7 +12,7 @@ Introduce los datos correspondientes:
 
 Y se generara el gráficos de dispersión:
 
-![](Resources/grafico_dispersion.jpg)
+![](https://raw.githubusercontent.com/LASPUMSS/COMPLEMENTO-DE-ECONOMETRIA-BASICA/master/Resources/grafico_dispersion.jpg)
 
 
 ## Regresión Por MCO A Una Variable Independiente
