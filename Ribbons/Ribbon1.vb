@@ -65,6 +65,49 @@ Public Class Ribbon1
         frm_RLVV.Show()
     End Sub
 
+    Public Sub btn_DocsGitHub(Control As Office.IRibbonControl)
+        Dim webAddress As String = "https://github.com/LASPUMSS/COMPLEMENTO-EXCEL-DE-ECONOMETRIA"
+        System.Diagnostics.Process.Start(webAddress)
+    End Sub
+
+    Public Sub btn_DocsBlog(Control As Office.IRibbonControl)
+        Dim webAddress As String = "https://primero-los-datos.blogspot.com/2023/01/complemento-excel-de-econometria-basica.html"
+        System.Diagnostics.Process.Start(webAddress)
+    End Sub
+
+#End Region
+
+#Region "Rutinas que permiten convertir las imágenes y cargarlas a cada botón de la cinta"
+    Public Function GetCustomImage(ByVal Ctrl As Office.IRibbonControl) As stdole.IPictureDisp
+
+        Dim pictureDisplay As stdole.IPictureDisp = Nothing
+
+        Select Case Ctrl.Id
+            Case Is = "docs_github"
+                pictureDisplay = ImageConverter.Convert(My.Resources.github_logo())
+            Case Is = "docs_blog"
+                pictureDisplay = ImageConverter.Convert(My.Resources.blogger_logo())
+        End Select
+
+        Return pictureDisplay
+
+    End Function
+
+    Friend Class ImageConverter
+
+        Inherits System.Windows.Forms.AxHost
+
+        Sub New()
+            MyBase.New(Nothing)
+        End Sub
+
+        Public Shared Function _
+        Convert(ByVal image As System.Drawing.Image) _
+        As stdole.IPictureDisp
+            Return GetIPictureDispFromPicture(image)
+        End Function
+    End Class
+
 #End Region
 
 #Region "Asistentes"

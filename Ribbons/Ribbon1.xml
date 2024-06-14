@@ -2,8 +2,8 @@
 <customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
   <ribbon>
     <tabs>
-      <tab id="Tab1" label="Econometria Basica">
-        <group id="Grupo_RLUV" label="REGRESION MCO PARA UNA VARIABLE">
+      <tab id="Tab1" label="Econometria">
+        <group id="Grupo_RLUV" label="REGRESION MCO PARA UNA VARIABLE INDEPENDIENTE">
 			<button onAction="btn_RLUV" id="RLUV" label="RLUV" size="large" imageMso="Chart3DColumnChart" supertip="Realiza una regresión por MCO con una variable independiente"/>
 		    <button onAction="btn_ScaPlot" id="ScaPlot" label="Grafico De Dispersión" size="large" imageMso="ChartTypeXYScatterInsertGallery" supertip="Genera un grafico de disperción."/>
 			<button onAction="btn_GHPH" id="GHPH" label="Generar Hoja Para Hipotesis" size="large" imageMso="ObjectsGroupMenu" supertip="Genera la hoja necesaria para aplicar hipotesis a los resultados de la regresión de modelo."/>
@@ -11,8 +11,12 @@
 			<button onAction="btn_IntConf" id="IntConf" label="Intervalo De Confianza" size="normal" imageMso="MacroConvertMacrosToVisualBasic" supertip="Calcula el intervalo de confianza de Beta 1 o Beta 2, dado un modelo RLUV. (Antes de usar esta herramienta debe generar una hoja hipotesis, caso contrario el metodo no funcionara)"/>
 			<button onAction="btn_CudAnov" id="CudAnov" label="Cuadro De Anova" size="normal" imageMso="ChartTypeOtherInsertGallery" supertip=" Genera un cuadro ANOVA, dado un modelo RLUV. (Antes de usar esta herramienta debe generar una hoja hipotesis, caso contrario el metodo no funcionara)"/>
         </group>
-		  <group id="Grupo_RLVV" label="REGRESION MCO PARA UNA VARIABLE">
+		  <group id="Grupo_RLVV" label="REGRESION MCO POR MATRICES">
 			<button onAction="btn_RLVV" id="RLVV" label="RLVV" size="large" imageMso="Chart3DColumnChart" supertip="Realiza una regresión por MCO con una variable independiente"/>
+		  </group>
+		  <group id="docs" label="DOCUMENTACION">
+			  <button onAction="btn_DocsBlog" id="docs_blog" label="Blog" size="large" getImage="GetCustomImage"  supertip="Blog del complemento, se aceptan sugerencias de que elementos se podrian agregar."/>
+			  <button onAction="btn_DocsGitHub" id="docs_github" label="Repositorio" size="large" getImage="GetCustomImage"  supertip="Repositorio del codigo del complemento."/>
 		  </group>
       </tab>
     </tabs>
